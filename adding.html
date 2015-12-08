@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>More complicated: Adding a simple preference | First Discovery Tool Documentation</title>
+        <link rel="icon" type="image/png" href="images/favico.png">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/foundation.min.css">
+        <link rel="stylesheet" href="css/highlightjs-custom.css">
+        <link rel="stylesheet" href="lib/infusion/src/lib/jquery/ui/css/default-theme/jquery.ui.theme.css">
+
+        <link rel="stylesheet" type="text/css" href="lib/infusion/src/framework/preferences/css/Enactors.css" />
+        <link rel="stylesheet" type="text/css" href="lib/infusion/src/framework/preferences/css/PrefsEditor.css" />
+        <link rel="stylesheet" type="text/css" href="lib/infusion/src/framework/preferences/css/SeparatedPanelPrefsEditor.css" />
+        <link rel="stylesheet" href="css/docs-first-discovery.css">
+
+        <script type="text/javascript" src="lib/infusion/infusion-uio.js"></script>
+        <script type="text/javascript" src="js/DocsCore.js"></script>
+        <script type="text/javascript" src="lib/jqueryui/jquery-ui.min.js"></script>
+    </head>
+    <body class="docs-template docs-core-sidebar-expanded">
+
+        <div class="container docs-template-container">
+
+            <!-- Skip Link -->
+            <nav id="skip" class="fl-inverted-color">
+                <a href="#topics" class="docs-template-skip-topics">Skip to Topics</a>
+                <a href="#content" class="docs-template-skip-content">Skip to Content</a>
+            </nav>
+            <!-- END skip link -->
+
+
+            <header class="ignore-for-TOC row fl-inverted-color">
+                <!-- BEGIN markup for Preference Editor -->
+                <div class="flc-prefsEditor-separatedPanel fl-prefsEditor-separatedPanel">
+                    <!-- This is the div that will contain the Preference Editor component -->
+                    <div class="flc-slidingPanel-panel flc-prefsEditor-iframe"></div>
+
+                    <!-- This div is for the sliding panel that shows and hides the Preference Editor controls -->
+                    <div class="fl-panelBar">
+                        <span class="fl-prefsEditor-buttons">
+                            <button id="reset" class="flc-prefsEditor-reset fl-prefsEditor-reset"><span class="fl-icon-undo"></span> Reset</button>
+                            <button id="show-hide" class="flc-slidingPanel-toggleButton fl-prefsEditor-showHide">+ show display preferences</button>
+                        </span>
+                    </div>
+                </div>
+                <!-- END markup for Preference Editor -->
+
+                <div class="small-12 column docs-template-header">
+                    <a class="docs-template-logo" href="index.html" title="Home: First Discovery Tool Documentation">
+                        <span class="show-for-sr">
+                            <h1>Documentation for the First Discovery Tool</h1>
+                        </span>
+                        <span aria-hidden="true">
+                            <h1>First Discovery Tool</h1>
+                            <span class="docs-template-tagline">Documentation</span>
+                        </span>
+                    </a>
+
+                    
+                    <nav class="right show-for-small-only docs-template-nav-mobile">
+                        <ul id="menu">
+                            <li class="docs-template-dropDown-header"><span class="docs-template-nav-mobile-icon"></span>
+                                <ul class="docs-template-dropDown">
+                                    
+                                    
+                                        
+                                            <li><a href="index.html" title="Overview">Overview</a></li>
+                                        
+                                    
+                                        
+                                            <li class="docs-template-category-active"><span aria-label="Currently on Category: Tutorials">Tutorials</span></li>
+                                        
+                                    
+                                        
+                                            <li><a href="index-api.html" title="API">API</a></li>
+                                        
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="docs-template-header">
+                    <nav class="small-12 column show-for-medium-up">
+                        <ul class="inline-list right">
+                        
+                        
+                            
+                                <li><a href="index.html" title="Overview">Overview</a></li>
+                            
+                        
+                            
+                                <li class="docs-template-category-active"><span aria-label="Currently on Category: Tutorials">Tutorials</span></li>
+                            
+                        
+                            
+                                <li><a href="index-api.html" title="API">API</a></li>
+                            
+                        
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="docs-corec-sidebar-bar ignore-for-TOC docs-template-topics-container small-8 medium-3 column">
+                <nav id="topics" class="docs-template-topics" tabindex="-1">
+                    
+                        
+                        
+                    
+                        
+                        
+                            <h2 class="docs-template-category">Tutorials</h2>
+                            
+                                <h3 class="docs-template-sectionName">Customizing the First Discovery Tool</h3>
+                                <ul>
+                                    
+                                        <li>
+                                            
+                                                <a href="reordering.html">Simplest: Reordering preferences</a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a href="removing.html">Less simple: Removing preferences</a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <span aria-label="Currently on: More complicated: Adding a simple preference " class="docs-template-topics-active">More complicated: Adding a simple preference </span>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a href="enactors.html">Enactors</a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a href="serverConfig.html">Advanced: Configuring the connection to the Preferences Server</a>
+                                            
+                                        </li>
+                                    
+                                </ul>
+                            
+                        
+                    
+                        
+                        
+                    
+                </nav>
+            </div>
+
+            <div class="docs-template-articleBody small-12 medium-8 column">
+
+                <div class="small-4 medium-1 column docs-template-topics-hideShow fl-inverted-color">
+                    <a href="#" class="docs-corec-sidebar-toggle">Topics</a>
+                </div>
+
+                <article id="content">
+                    <h1>More complicated: Adding a simple preference</h1>
+
+                    <div class="flc-toc-tocContainer docs-template-uio-toc"> </div>
+
+
+                    <div class="docs-template-articleContent">
+                        <p>Your flying car has an auto-pilot feature, and you want to add a preference for this. It’s a boolean preference, i.e. &quot;Do you want auto-pilot turned on by default?&quot; with a simple yes/no answer.</p>
+<h2 id="quick-version">Quick version</h2>
+<ol>
+<li>Edit <code>src/schemas/schemas.js</code> to add the actual preference to the primary schemas.</li>
+<li>Create JSON files in the messages folder with the necessary strings.</li>
+<li>Edit <code>demos/index.html</code> to add icon at bottom.</li>
+<li>Edit <code>src/html/firstDiscovery.html</code> to add a placeholder for the panel.</li>
+<li>Edit <code>src/css/style.css</code> to add styles for the icon and panel.</li>
+<li>Create a JavaScript file for the code that creates the panel.</li>
+<li>Link to the new JavaScript file in <code>demos/index.html</code>.</li>
+<li>Edit <code>src/schemas/schemas.js</code> to add code for the panel to auxiliary schema.</li>
+</ol>
+<h2 id="detailed-instructions">Detailed Instructions</h2>
+<ol>
+<li><p>Edit <code>src/schemas/schemas.js</code> to add the actual preference to the primary schemas.</p>
+<p> A. The <code>src/schemas/schemas.js</code> file contains the primary schema, which defines the preferences, and the auxiliary schema, which defines the editor itself (i.e. the panels used to adjust the preferences, where to find HTML templates, etc.)</p>
+<p> You can see the entire file here: <a href="https://github.com/GPII/first-discovery/blob/master/src/schemas/schemas.js">https://github.com/GPII/first-discovery/blob/master/src/schemas/schemas.js</a></p>
+<p> B. In the <code>schemas.js</code> file, find the definition of the <code>&quot;speak&quot;</code> primary schema, which start with <code>fluid.defaults(&quot;gpii.firstDiscovery.schemas.speak&quot;,</code>:</p>
+<pre class="highlight"><code class="hljs javascript"> fluid.defaults(<span class="hljs-string">"gpii.firstDiscovery.schemas.speak"</span>, {
+     gradeNames: [<span class="hljs-string">"fluid.prefs.schemas"</span>],
+         schema: {
+           <span class="hljs-string">"gpii.firstDiscovery.speak"</span>: {
+                <span class="hljs-string">"type"</span>: <span class="hljs-string">"boolean"</span>,
+                 <span class="hljs-string">"default"</span>: <span class="hljs-literal">true</span>
+             }
+         }
+ });
+</code></pre>
+<p> This preference is a boolean preference, just like the auto-pilot preference we want to add.</p>
+<p> C. Add a new definition that takes the same form as the <code>&quot;speak&quot;</code> preference, but with <code>&quot;autoPilot&quot;</code> instead of <code>&quot;speak&quot;</code>. Change the default value to false (since we probably don’t want the car to just start out with auto-pilot on):</p>
+<pre class="highlight"><code class="hljs javascript"> fluid.defaults(<span class="hljs-string">"gpii.firstDiscovery.schemas.autoPilot"</span>, {
+     gradeNames: [<span class="hljs-string">"fluid.prefs.schemas"</span>],
+         schema: {
+           <span class="hljs-string">"gpii.firstDiscovery.autoPilot"</span>: {
+                <span class="hljs-string">"type"</span>: <span class="hljs-string">"boolean"</span>,
+                 <span class="hljs-string">"default"</span>: <span class="hljs-literal">false</span>
+             }
+         }
+ });
+</code></pre>
+</li>
+<li><p>Create JSON files in the src/messages folder with the necessary strings.</p>
+<p> A. The src/messages folder contains JSON files containing the interface strings for each preference panel. The file &quot;speakText_en-US.json&quot; is an example of the form of message file you’ll create for your preference panel.</p>
+<p> You can see that file here: <a href="https://github.com/GPII/first-discovery/blob/master/src/messages/speakText_en-US.json">https://github.com/GPII/first-discovery/blob/master/src/messages/speakText_en-US.json</a></p>
+<p> B. Create a new file in the messages folder called &quot;autoPilot_en-US.json&quot;.</p>
+<p> C. Edit the contents of the file according to the auto-pilot functionality:</p>
+<ul>
+<li>Define the &quot;instructions&quot; as &quot;Do you want auto-pilot turned on by default?&quot;;</li>
+<li>Define the &quot;yes-tooltip&quot; as &quot;Select to turn auto-pilot on&quot;;</li>
+<li>Define the &quot;no-tooltips&quot;Select to turn auto-pilot off&quot;;</li>
+<li>Define the &quot;yes-tooltipAtSelect&quot; as &quot;Auto-pilot is on&quot;;</li>
+<li><p>Define the &quot;no-tooltipAtSelect&quot; as &quot;Auto-pilot is off&quot;.</p>
+<pre class="highlight"><code class="hljs javascript">{
+  <span class="hljs-string">"instructions"</span>: <span class="hljs-string">"Do you want auto-pilot turned on by default?"</span>,
+  <span class="hljs-string">"no"</span>: <span class="hljs-string">"No"</span>,
+  <span class="hljs-string">"yes"</span>: <span class="hljs-string">"Yes"</span>,
+
+  <span class="hljs-string">"yes-tooltip"</span>: <span class="hljs-string">"Select to turn auto-pilot on"</span>,
+  <span class="hljs-string">"no-tooltip"</span>: <span class="hljs-string">"Select to turn auto-pilot off"</span>,
+  <span class="hljs-string">"yes-tooltipAtSelect"</span>: <span class="hljs-string">"Auto-pilot is on"</span>,
+  <span class="hljs-string">"no-tooltipAtSelect"</span>: <span class="hljs-string">"Auto-pilot is off"</span>
+}
+</code></pre>
+<p>D. Duplicate the file for other languages; for example, create a file called &quot;autoPilot_fr-FR.json&quot; for a French version. Use exactly the same keys in the file, but change the values to the translated strings:</p>
+<pre class="highlight"><code class="hljs javascript">{
+  <span class="hljs-string">"instructions"</span>: <span class="hljs-string">"Voulez-vous le pilote automatique activé par défaut??"</span>,
+  <span class="hljs-string">"no"</span>: <span class="hljs-string">"Non"</span>,
+  <span class="hljs-string">"yes"</span>: <span class="hljs-string">"Oui"</span>,
+
+  <span class="hljs-string">"yes-tooltip"</span>: <span class="hljs-string">"Sélectionner pour activer le pilote automatique"</span>,
+  <span class="hljs-string">"no-tooltip"</span>: <span class="hljs-string">"Sélectionner pour désactiver le pilote automatique"</span>,
+  <span class="hljs-string">"yes-tooltipAtSelect"</span>: <span class="hljs-string">"Pilote automatique est activée"</span>,
+  <span class="hljs-string">"no-tooltipAtSelect"</span>: <span class="hljs-string">"Pilote automatique est désactivée"</span>
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Edit <code>demos/index.html</code> and the CSS to add icon at bottom.</p>
+<p> A. In the <code>demos/index.html</code> file, find the list of icons (a <code>&lt;ul&gt;</code> with the class &quot;gpii-fd-navIcon-outer&quot;  as described above).</p>
+<p> B. Add a new <code>&lt;li&gt;</code> element of the same form as the others, but define the preference-specific class name to reflect the auto-pilot preference:</p>
+<pre class="highlight"><code class="hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpii-fd-navIcon-outer"</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-navIcon gpii-fd-navIcon gpii-fd-lang"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-activeIndicator gpii-fd-activeIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-confirmedIndicator gpii-fd-confirmedIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-navIcon gpii-fd-navIcon-welcome"</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-navIcon gpii-fd-navIcon gpii-fd-showSounds"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-activeIndicator gpii-fd-activeIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-confirmedIndicator gpii-fd-confirmedIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-navIcon gpii-fd-navIcon gpii-fd-autoPilot"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-activeIndicator gpii-fd-activeIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-confirmedIndicator gpii-fd-confirmedIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-navIcon gpii-fd-navIcon gpii-fd-volume"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-activeIndicator gpii-fd-activeIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-confirmedIndicator gpii-fd-confirmedIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- some list items not shown --&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</code></pre>
+<p> Note that only the last class name on the <code>&lt;li&gt;</code> itself has changed.</p>
+</li>
+<li><p>Edit <code>src/html/firstDiscovery.html</code> to add a placeholder for the panel.</p>
+<p> A. Add a new <code>&lt;section&gt;</code> element of the same form as the others, but define the class names to reflect the auto-pilot preference:</p>
+<pre class="highlight"><code class="hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-lang gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-lang gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-welcome gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-welcome gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-showSounds gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-showSounds gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-autoPilot gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-autoPilot gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-speakText gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-speakText gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-speechRate gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-speechRate gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-size gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-size gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-keyboard gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-keyboard gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-congratulations gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-congratulations gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+</code></pre>
+<p> Make sure that the new <code>&lt;section&gt;</code> element places the panel in the correct order: the same as the navigation icons in demos/index.html.</p>
+</li>
+<li><p>Edit <code>src/css/style.css</code> to add styles for the icon and panel.</p>
+<p> A. The icons at the bottom of the screen are implemented in CSS, using an icon font. These instructions assume you are familiar with icon fonts and will use them for your new panel. For information about creating and usin icon fonts, see <a href="http://docs.fluidproject.org/infusion/development/tutorial-creatingANewAdjusterUI/HowToCreateAndUseFontIcons.html">http://docs.fluidproject.org/infusion/development/tutorial-creatingANewAdjusterUI/HowToCreateAndUseFontIcons.html</a></p>
+<p> You can see the entire CSS file here: <a href="https://github.com/GPII/first-discovery/blob/master/src/css/style.css">https://github.com/GPII/first-discovery/blob/master/src/css/style.css</a></p>
+<p> B. The icon characters are added as content to the document using the :before selector and the content property, as seen in the CSS for the language icon:</p>
+<pre class="highlight"><code class="hljs css"> <span class="hljs-class">.gpii-fd-lang</span><span class="hljs-pseudo">:before</span> <span class="hljs-rules">{
+     <span class="hljs-rule"><span class="hljs-attribute">content</span>:<span class="hljs-value"> <span class="hljs-string">"\e608"</span></span></span>;
+ <span class="hljs-rule">}</span></span>
+</code></pre>
+<p> C. Create a style for your new icon, using the class name defined in step 3, and set the content to the character code for your desired icon (this example will use &quot;\e700&quot; just as an example – no such character exists currently in the icon font; you must use the correct character code for the icon you want to use).</p>
+<pre class="highlight"><code class="hljs css"> <span class="hljs-class">.gpii-fd-autoPilot</span><span class="hljs-pseudo">:before</span> <span class="hljs-rules">{
+     <span class="hljs-rule"><span class="hljs-attribute">content</span>:<span class="hljs-value"> <span class="hljs-string">"\e700"</span></span></span>;
+ <span class="hljs-rule">}</span></span>
+</code></pre>
+</li>
+<li><p>Create a JavaScript file for the code that creates the panel.</p>
+<p> A. Create a new JavaScript file in the src/js folder called newPanels.js. Create a closure for your code:</p>
+<pre class="highlight"><code class="hljs javascript"> (<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($, fluid)</span> </span>{
+     <span class="hljs-comment">// your code will go here</span>
+ })(jQuery, fluid_2_0);
+</code></pre>
+<p> A <em>closure</em> wraps the code in an anonymous function. This separates private and public functions: Only objects or functions that are attached to the global namespace object will be publicly available. Anything else inside the anonymous function will be invisible to the rest of the world.</p>
+<p> D. Inside the closure use a call to fluid.defaults() to create the panel, which we’ll call &quot;gpii.firstDiscovery.panel.autoPilot&quot;:</p>
+<pre class="highlight"><code class="hljs javascript"> (<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($, fluid)</span> </span>{
+     fluid.defaults(<span class="hljs-string">"gpii.firstDiscovery.panel.autoPilot"</span>, {
+         <span class="hljs-comment">// configuration options will go here</span>
+     });
+ })(jQuery, fluid_2_0);
+</code></pre>
+<p> <code>fluid.defaults()</code> is one of the core functions in Infusion: It is used to create components (the building blocks of any Infusion application) and register them with the Framework.</p>
+<p> E. Fill in the configuration options for the panel:</p>
+<p> The First Discovery Tool currently presents four basic ‘styles’ of preference: 1) basic yes/no questions, 2) a range of values (like the text size), 3) a set of choices (like the colour combinations), and 4) the keyboard adjustments.</p>
+<p> The code for the First Discovery Tool includes some base grades that can be used to implement a panel of one of these types (including the HTML template, and the CSS for styling). These base grades define most of the functionality for a particular type of panel; using these grades will effectively ‘inherit’ this functionality.</p>
+<p> For a boolean preference, the First Discovery Tool has a grade called gpii.firstDiscovery.panel.yesNo that provides most of the functionality for a simple yes/no panel:</p>
+<pre class="highlight"><code class="hljs javascript"> (<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($, fluid)</span> </span>{
+     fluid.defaults(<span class="hljs-string">"gpii.firstDiscovery.panel.autoPilot"</span>, {
+         gradeNames: [<span class="hljs-string">"gpii.firstDiscovery.panel.yesNo"</span>],
+         <span class="hljs-comment">// more options will go here</span>
+     });
+ })(jQuery, fluid_2_0);
+</code></pre>
+<p> (You will see in the code that other panel types have different grades specified in the gradeNames option.)
+ Every panel needs a preferenceMap option to tell the framework how to map the preference in the Primary Schema to the Panel:</p>
+<pre class="highlight"><code class="hljs javascript"> (<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">($, fluid)</span> </span>{
+     fluid.defaults(<span class="hljs-string">"gpii.firstDiscovery.panel.autoPilot"</span>, {
+         gradeNames: [<span class="hljs-string">"gpii.firstDiscovery.panel.yesNo"</span>],
+         preferenceMap: {
+             <span class="hljs-string">"gpii.firstDiscovery.autoPilot"</span>: {
+                 <span class="hljs-string">"model.value"</span>: <span class="hljs-string">"default"</span>
+             }
+         }
+     });
+ })(jQuery, fluid_2_0);
+</code></pre>
+</li>
+<li><p>Link to the new JavaScript file in <code>demos/index.html</code>.</p>
+<p> A. Add a <code>&lt;script&gt;</code> link to the new JavaScript file in the head of demos/index.html:</p>
+<pre class="highlight"><code class="hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"../src/js/nav.js`&gt;&lt;/script&gt;
+ &lt;script type="</span><span class="hljs-value">text</span>/<span class="hljs-attribute">javascript</span>" <span class="hljs-attribute">src</span>=<span class="hljs-value">"../src/js/firstDiscoveryEditor.js`&gt;&lt;/script&gt;
+ &lt;script type="</span><span class="hljs-value">text</span>/<span class="hljs-attribute">javascript</span>" <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/demos.js`&gt;&lt;/script&gt;
+ &lt;script type="</span><span class="hljs-value">text</span>/<span class="hljs-attribute">javascript</span>" <span class="hljs-attribute">src</span>=<span class="hljs-value">"js/newPanels.js`&gt;&lt;/script&gt;
+
+ &lt;title&gt;First Discovery Tool&lt;/title&gt;
+</span></span></code></pre>
+</li>
+<li><p>Edit <code>src/schemas/schemas.js</code> to add code for panel to the auxiliary schema.</p>
+<p> A. The <code>src/schemas/schemas.js</code> file contains the auxiliary schema, which defines the editor itself (i.e. the panels used to adjust the preferences, where to find HTML templates, etc.)</p>
+<p> You can see the entire file here: <a href="https://github.com/GPII/first-discovery/blob/master/src/schemas/schemas.js">https://github.com/GPII/first-discovery/blob/master/src/schemas/schemas.js</a></p>
+<p> B. In the <code>schemas.js</code> file, find the auxiliary schema, which starts with <code>fluid.defaults(&quot;gpii.firstDiscovery.auxSchema&quot;,</code>.</p>
+<pre class="highlight"><code class="hljs javascript"> fluid.defaults(<span class="hljs-string">"gpii.firstDiscovery.auxSchema"</span>, {
+     gradeNames: [<span class="hljs-string">"fluid.prefs.auxSchema"</span>],
+     auxiliarySchema: {
+         <span class="hljs-string">"loaderGrades"</span>: [<span class="hljs-string">"gpii.firstDiscovery.firstDiscoveryEditor"</span>],
+         <span class="hljs-comment">// more not shown here</span>
+</code></pre>
+<p> C. Inside the section named &quot;auxiliarySchema&quot;, add a section for the new panel:</p>
+<pre class="highlight"><code class="hljs javascript"> fluid.defaults(<span class="hljs-string">"gpii.firstDiscovery.auxSchema"</span>, {
+     gradeNames: [<span class="hljs-string">"fluid.prefs.auxSchema"</span>],
+     auxiliarySchema: {
+         <span class="hljs-string">"loaderGrades"</span>: [<span class="hljs-string">"gpii.firstDiscovery.firstDiscoveryEditor"</span>],
+         <span class="hljs-string">"namespace"</span>: <span class="hljs-string">"gpii.firstDiscovery"</span>,
+         <span class="hljs-string">"terms"</span>: {
+             <span class="hljs-string">"templatePrefix"</span>: <span class="hljs-string">"../src/html"</span>,
+             <span class="hljs-string">"messagePrefix"</span>: <span class="hljs-string">"../src/messages"</span>
+         },
+         <span class="hljs-string">"template"</span>: <span class="hljs-string">"%templatePrefix/firstDiscovery.html"</span>,
+         <span class="hljs-string">"message"</span>: <span class="hljs-string">"%messagePrefix/firstDiscovery.json"</span>,
+         <span class="hljs-string">"lang"</span>: {
+             <span class="hljs-comment">// some content not shown</span>
+         },
+         <span class="hljs-string">"welcome"</span>: {
+             <span class="hljs-comment">// some content not shown</span>
+         },
+         <span class="hljs-string">"speakText"</span>: {
+             <span class="hljs-comment">// some content not shown</span>
+         },
+         <span class="hljs-string">"autoPilot"</span>: {
+             <span class="hljs-string">"type"</span>: <span class="hljs-string">"gpii.firstDiscovery.autoPilot"</span>,
+             <span class="hljs-string">"panel"</span>: {
+                 <span class="hljs-string">"type"</span>: <span class="hljs-string">"gpii.firstDiscovery.panel.autoPilot"</span>,
+                 <span class="hljs-string">"container"</span>: <span class="hljs-string">".gpiic-fd-prefsEditor-panel-autoPilot"</span>,
+                 <span class="hljs-string">"template"</span>: <span class="hljs-string">"%templatePrefix/yesNo.html"</span>,
+                 <span class="hljs-string">"message"</span>: <span class="hljs-string">"%messagePrefix/autoPilot.json"</span>
+             }
+         },
+         <span class="hljs-comment">// more content not shown</span>
+     }
+ });
+</code></pre>
+</li>
+</ol>
+
+                    </div>
+
+                    <p class="docs-template-githubLink"><a href="https://github.com/GPII/docs-first-discovery/blob/master/src/documents/adding.md" rel="nofollow" target="_blank" class="link-external">Edit this Page on GitHub</a></p>
+                </article>
+
+            </div>
+
+            <footer class="row docs-template-footer fl-inverted-color">
+                <p>The First Discovery Tool was developed by the <a href="http://idrc.ocad.ca/" rel="nofollow" target="_blank">Inclusive Design Research Centre</a>,<br/>
+                through the <a href="https://wiki.fluidproject.org/display/fluid/Preferences+for+Global+Access">Preferences for Global Access</a> project,
+                funded by the US Dept. of Educations's <a href="http://www.ed.gov/category/program/national-institute-disability-and-rehabilitation-research">National Institute on Disability and Rehabilitation Research</a>.</p>
+            </footer>
+
+            <script type="text/javascript">
+                docsCore.init("./");
+                jQuery( "#menu" ).menu({
+                    position: {my: "right top", at: "right bottom"},
+                    icons: {submenu:"ui-icon-blank"},
+                    // Remove the anchors from the tabindex as they are triggered
+                    // via the select event. (see below)
+                    create: function (event, ui) {
+                        jQuery("#menu .ui-menu-item a").attr("tabindex", -1);
+                    },
+                    // The jQuery menu doesn't seem to like it when the <a> are
+                    // specified as the "item" and are nested under an <li>. There
+                    // seems to be styling issues and occassionally an error thrown.
+                    // The page transition work around below is used to maintian the semantic structure,
+                    // while allowing the menu to behave as normal.
+                    select: function( event, ui ) {
+                        var location = ui.item.children("a").attr("href");
+                        if (location) {
+                            window.location.href = location;
+                        }
+                    }
+                });
+            </script>
+        </div> <!-- end container -->
+
+    </body>
+</html>

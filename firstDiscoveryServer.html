@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>First Discovery Server | First Discovery Tool Documentation</title>
+        <link rel="icon" type="image/png" href="images/favico.png">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/foundation.min.css">
+        <link rel="stylesheet" href="css/highlightjs-custom.css">
+        <link rel="stylesheet" href="lib/infusion/src/lib/jquery/ui/css/default-theme/jquery.ui.theme.css">
+
+        <link rel="stylesheet" type="text/css" href="lib/infusion/src/framework/preferences/css/Enactors.css" />
+        <link rel="stylesheet" type="text/css" href="lib/infusion/src/framework/preferences/css/PrefsEditor.css" />
+        <link rel="stylesheet" type="text/css" href="lib/infusion/src/framework/preferences/css/SeparatedPanelPrefsEditor.css" />
+        <link rel="stylesheet" href="css/docs-first-discovery.css">
+
+        <script type="text/javascript" src="lib/infusion/infusion-uio.js"></script>
+        <script type="text/javascript" src="js/DocsCore.js"></script>
+        <script type="text/javascript" src="lib/jqueryui/jquery-ui.min.js"></script>
+    </head>
+    <body class="docs-template docs-core-sidebar-expanded">
+
+        <div class="container docs-template-container">
+
+            <!-- Skip Link -->
+            <nav id="skip" class="fl-inverted-color">
+                <a href="#topics" class="docs-template-skip-topics">Skip to Topics</a>
+                <a href="#content" class="docs-template-skip-content">Skip to Content</a>
+            </nav>
+            <!-- END skip link -->
+
+
+            <header class="ignore-for-TOC row fl-inverted-color">
+                <!-- BEGIN markup for Preference Editor -->
+                <div class="flc-prefsEditor-separatedPanel fl-prefsEditor-separatedPanel">
+                    <!-- This is the div that will contain the Preference Editor component -->
+                    <div class="flc-slidingPanel-panel flc-prefsEditor-iframe"></div>
+
+                    <!-- This div is for the sliding panel that shows and hides the Preference Editor controls -->
+                    <div class="fl-panelBar">
+                        <span class="fl-prefsEditor-buttons">
+                            <button id="reset" class="flc-prefsEditor-reset fl-prefsEditor-reset"><span class="fl-icon-undo"></span> Reset</button>
+                            <button id="show-hide" class="flc-slidingPanel-toggleButton fl-prefsEditor-showHide"> Show/Hide</button>
+                        </span>
+                    </div>
+                </div>
+                <!-- END markup for Preference Editor -->
+
+                <div class="small-12 column docs-template-header">
+                    <a class="docs-template-logo" href="index.html" title="Home: First Discovery Tool Documentation">
+                        <span class="show-for-sr">
+                            <h1>Documentation for the First Discovery Tool</h1>
+                        </span>
+                        <span aria-hidden="true">
+                            <h1>First Discovery Tool</h1>
+                            <span class="docs-template-tagline">Documentation</span>
+                        </span>
+                    </a>
+
+                    
+                    <nav class="right show-for-small-only docs-template-nav-mobile">
+                        <ul id="menu">
+                            <li class="docs-template-dropDown-header"><span class="docs-template-nav-mobile-icon"></span>
+                                <ul class="docs-template-dropDown">
+                                    
+                                    
+                                        
+                                            <li class="docs-template-category-active"><span aria-label="Currently on Category: Overview">Overview</span></li>
+                                        
+                                    
+                                        
+                                            <li><a href="index-tutorials.html" title="Tutorials">Tutorials</a></li>
+                                        
+                                    
+                                        
+                                            <li><a href="index-api.html" title="API">API</a></li>
+                                        
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="docs-template-header">
+                    <nav class="small-12 column show-for-medium-up">
+                        <ul class="inline-list right">
+                        
+                        
+                            
+                                <li class="docs-template-category-active"><span aria-label="Currently on Category: Overview">Overview</span></li>
+                            
+                        
+                            
+                                <li><a href="index-tutorials.html" title="Tutorials">Tutorials</a></li>
+                            
+                        
+                            
+                                <li><a href="index-api.html" title="API">API</a></li>
+                            
+                        
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="docs-corec-sidebar-bar ignore-for-TOC docs-template-topics-container small-8 medium-3 column">
+                <nav id="topics" class="docs-template-topics" tabindex="-1">
+                    
+                        
+                        
+                            <h2 class="docs-template-category">Overview</h2>
+                            
+                                <h3 class="docs-template-sectionName">First Discovery Tool</h3>
+                                <ul>
+                                    
+                                        <li>
+                                            
+                                                <a href="index.html">Introduction</a>
+                                            
+                                        </li>
+                                    
+                                </ul>
+                            
+                                <h3 class="docs-template-sectionName">Preferences Server Integration</h3>
+                                <ul>
+                                    
+                                        <li>
+                                            
+                                                <a href="integrationIntro.html">Introduction</a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a href="integrationWorkFlow.html">The Work Flow</a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <span aria-label="Currently on: The Work Flow" class="docs-template-topics-active">The Work Flow</span>
+                                            
+                                        </li>
+                                    
+                                </ul>
+                            
+                        
+                    
+                        
+                        
+                    
+                        
+                        
+                    
+                </nav>
+            </div>
+
+            <div class="docs-template-articleBody small-12 medium-8 column">
+
+                <div class="small-4 medium-1 column docs-template-topics-hideShow fl-inverted-color">
+                    <a href="#" class="docs-corec-sidebar-toggle">Topics</a>
+                </div>
+
+                <article id="content">
+                    <h1>First Discovery Server</h1>
+
+                    <div class="flc-toc-tocContainer docs-template-uio-toc"> </div>
+
+
+                    <div class="docs-template-articleContent">
+                        <h2 id="configuration">Configuration</h2>
+<h3 id="host-port">Host Port</h3>
+<p>By default the server will run from port 8088, but can be configured to use a different port by setting the <code>FIRST_DISCOVERY_SERVER_TCP_PORT</code> environment variable to a different port number.</p>
+<h3 id="preferences-server-communication">Preferences Server Communication</h3>
+<p>The First Discovery Server connects to the Preferences Server via the Security layer. The server-to-server communication needs to be configured to specify things such as hostname, port, client_id, client_secret and etc.</p>
+<p>Configuration can be provided using either environment variables or a JSON config file. In the event that both are provided, the environment variables will take precedence. If a JSON config file is used, it must be located in the server&#39;s root directory and be called <strong>fd_security_config.json</strong>.</p>
+<div class="infusion-docs-note">
+    Note: All of the configuration is required. If any parts are missing, an error will be thrown.
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Configuration</th>
+            <th>Description</th>
+            <th>Example</th>
+        <tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p>
+                    Environment Variable:
+                    <code>GPII_OAUTH2_TCP_PORT</code>
+                </p>
+
+                <p>
+                    JSON Config Path:
+                    <code>securityServer.port</code>
+                </p>
+            </td>
+            <td>
+                The port number that the GPII OAuth2 server is hosted at.
+            </td>
+            <td>
+                &quot;8088&quot;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Environment Variable:
+                    <code>GPII_OAUTH2_HOST_NAME</code>
+                </p>
+
+                <p>
+                    JSON Config Path:
+                    <code>securityServer.hostname</code>
+                </p>
+            </td>
+            <td>
+                The hostname that the GPII OAuth2 server is hosted at.
+            </td>
+            <td>
+                &quot;<a href="http://localhost">http://localhost</a>&quot;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Environment Variable:
+                    <code>GPII_OAUTH2_ACCESS_TOKEN_PATH</code>
+                </p>
+
+                <p>
+                    JSON Config Path:
+                    <code>securityServer.paths.token</code>
+                </p>
+            </td>
+            <td>
+                The path to the resource for requesting an access token
+            </td>
+            <td>
+                &quot;/access_token&quot;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Environment Variable:
+                    <code>GPII_OAUTH2_ADD_PREFERENCES_PATH</code>
+                </p>
+
+                <p>
+                    JSON Config Path:
+                    <code>securityServer.paths.preferences</code>
+                </p>
+            </td>
+            <td>
+                The path to the resource for creating a preference set.
+                A query parameter can be added to provide the view/ontology that the
+                preferences are to be stored in.
+            </td>
+            <td>
+                &quot;/add-preferences?view=%view&quot;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Environment Variable:
+                    <code>GPII_OAUTH2_AUTH_GRANT_TYPE</code>
+                </p>
+
+                <p>
+                    JSON Config Path:
+                    <code>authentication.grant_type</code>
+                </p>
+            </td>
+            <td>
+                The grant type supported by the OAuth2 server.
+            </td>
+            <td>
+                &quot;client_credentials&quot;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Environment Variable:
+                    <code>GPII_OAUTH2_AUTH_SCOPE</code>
+                </p>
+
+                <p>
+                    JSON Config Path:
+                    <code>authentication.scope</code>
+                </p>
+            </td>
+            <td>
+                The level of permissions that are being requested.
+            </td>
+            <td>
+                &quot;add_preferences&quot;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Environment Variable:
+                    <code>GPII_OAUTH2_AUTH_CLIENT_ID</code>
+                </p>
+
+                <p>
+                    JSON Config Path:
+                    <code>authentication.client_id</code>
+                </p>
+            </td>
+            <td>
+                The client ID registered with the OAuth2 server.
+            </td>
+            <td>
+                &quot;client_id_first_discovery&quot;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Environment Variable:
+                    <code>GPII_OAUTH2_AUTH_CLIENT_SECRET</code>
+                </p>
+
+                <p>
+                    JSON Config Path:
+                    <code>authentication.client_secret</code>
+                </p>
+            </td>
+            <td>
+                The client secret registered with the OAuth2 server.
+                Used to securely identify the client with the OAuth2.
+            </td>
+            <td>
+                &quot;client_secret_first_discovery&quot;
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4 id="example-config-file">Example: Config File</h4>
+<pre class="highlight"><code class="hljs json">{
+    "<span class="hljs-attribute">securityServer</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">port</span>": <span class="hljs-value"><span class="hljs-string">"8081"</span></span>,
+        "<span class="hljs-attribute">hostname</span>": <span class="hljs-value"><span class="hljs-string">"http://10.0.2.2"</span></span>,
+        "<span class="hljs-attribute">paths</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">token</span>": <span class="hljs-value"><span class="hljs-string">"/access_token"</span></span>,
+            "<span class="hljs-attribute">preferences</span>": <span class="hljs-value"><span class="hljs-string">"/add-preferences?view=%view"</span>
+        </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">authentication</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">grant_type</span>": <span class="hljs-value"><span class="hljs-string">"client_credentials"</span></span>,
+        "<span class="hljs-attribute">scope</span>": <span class="hljs-value"><span class="hljs-string">"add_preferences"</span></span>,
+        "<span class="hljs-attribute">client_id</span>": <span class="hljs-value"><span class="hljs-string">"client_id_first_discovery"</span></span>,
+        "<span class="hljs-attribute">client_secret</span>": <span class="hljs-value"><span class="hljs-string">"client_secret_first_discovery"</span>
+    </span>}
+</span>}
+</code></pre>
+<h4 id="gpii-preferences-server-specific-configuration">GPII Preferences Server Specific Configuration</h4>
+<p>When connecting to the the GPII Preferences server the First Discovery Server must be configured with the following specific values:</p>
+<table>
+    <thead>
+        <tr>
+            <th>Configuration</th>
+            <th>Value</th>
+        <tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <p>
+                    Environment Variable:
+                    <code>GPII_OAUTH2_ACCESS_TOKEN_PATH</code>
+                </p>
+
+                <p>
+                    JSON Config Path:
+                    <code>securityServer.paths.token</code>
+                </p>
+            </td>
+            <td>
+                &quot;/access_token&quot;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Environment Variable:
+                    <code>GPII_OAUTH2_ADD_PREFERENCES_PATH</code>
+                </p>
+
+                <p>
+                    JSON Config Path:
+                    <code>securityServer.paths.preferences</code>
+                </p>
+            </td>
+            <td>
+                &quot;/add-preferences?view=%view&quot;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Environment Variable:
+                    <code>GPII_OAUTH2_AUTH_GRANT_TYPE</code>
+                </p>
+
+                <p>
+                    JSON Config Path:
+                    <code>authentication.grant_type</code>
+                </p>
+            </td>
+            <td>
+                &quot;client_credentials&quot;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Environment Variable:
+                    <code>GPII_OAUTH2_AUTH_SCOPE</code>
+                </p>
+
+                <p>
+                    JSON Config Path:
+                    <code>authentication.scope</code>
+                </p>
+            </td>
+            <td>
+                &quot;add_preferences&quot;
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p>For more information about how the Preferences Server&#39;s security layer is configured. Please see the <a href="https://wiki.gpii.net/w/GPII_OAuth_2_Guide#Client_Credentials_Grant">Client Credentials Grant</a> documentation.</p>
+<h2 id="rest-api">REST API</h2>
+<table>
+    <thead>
+        <tr>
+            <th>URL</th>
+            <th>Request</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>/user?[view=:view]</code></td>
+            <td><code>POST</code></td>
+            <td>
+                Accepts a set of preferences, in a JSON object, to be stored on the preferences server. For example:
+
+                <code>
+                    
+{
+    &quot;gpii_firstDiscovery_language&quot;: &quot;en-US&quot;
+}
+                    
+                </code>
+
+                A GPII token will be returned and can be used for retrieving the preferences on a GPII enabled device. For example:
+
+                <code>
+                    
+{
+  &quot;userToken&quot;: &quot;2288e676-d0bb-4d29-8131-7cff268ba012&quot;,
+  &quot;preferences&quot;: {
+    &quot;contexts&quot;: {
+      &quot;gpii-default&quot;: {
+        &quot;name&quot;: &quot;Default preferences&quot;,
+        &quot;preferences&quot;: {
+          &quot;gpii_firstDiscovery_language&quot;: &quot;en-US&quot;
+        }
+      }
+    }
+  }
+}
+                    
+                </code>
+
+                The <code>view</code> query parameter is used to specify which ontology the preferences are stored in. (See: <a href="https://github.com/GPII/universal/blob/master/documentation/PreferencesServer.md#post-preferencesviewview">Prefrences Server</a>)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="demos">Demos</h2>
+<p>This demo implements the integration with the <a href="https://github.com/GPII/universal/blob/master/documentation/PreferencesServer.md">GPII Preferences Server</a> to save preferences.
+<a href="http://build.fluidproject.org/first-discovery/demos/prefsServerIntegration">http://build.fluidproject.org/first-discovery/demos/prefsServerIntegration</a></p>
+<h2 id="source-code">Source code</h2>
+<ul>
+<li><a href="https://github.com/GPII/first-discovery">Client (First Discovery Tool)</a></li>
+<li><a href="https://github.com/GPII/first-discovery-server">Server (First Discovery Server) - under development</a></li>
+<li><a href="https://github.com/GPII/universal">GPII Preferences Server</a></li>
+</ul>
+
+                    </div>
+
+                    <p class="docs-template-githubLink"><a href="https://github.com/GPII/docs-first-discovery/blob/master/src/documents/firstDiscoveryServer.md" rel="nofollow" target="_blank" class="link-external">Edit this Page on GitHub</a></p>
+                </article>
+
+            </div>
+
+            <footer class="row docs-template-footer fl-inverted-color">
+                <p>The First Discovery Tool was developed by the <a href="http://idrc.ocad.ca/" rel="nofollow" target="_blank">Inclusive Design Research Centre</a>,<br/>
+                through the <a href="https://wiki.fluidproject.org/display/fluid/Preferences+for+Global+Access">Preferences for Global Access</a> project,
+                funded by the US Dept. of Educations's <a href="http://www.ed.gov/category/program/national-institute-disability-and-rehabilitation-research">National Institute on Disability and Rehabilitation Research</a>.</p>
+            </footer>
+
+            <script type="text/javascript">
+                docsCore.init("./");
+                jQuery( "#menu" ).menu({
+                    position: {my: "right top", at: "right bottom"},
+                    icons: {submenu:"ui-icon-blank"},
+                    // Remove the anchors from the tabindex as they are triggered
+                    // via the select event. (see below)
+                    create: function (event, ui) {
+                        jQuery("#menu .ui-menu-item a").attr("tabindex", -1);
+                    },
+                    // The jQuery menu doesn't seem to like it when the <a> are
+                    // specified as the "item" and are nested under an <li>. There
+                    // seems to be styling issues and occassionally an error thrown.
+                    // The page transition work around below is used to maintian the semantic structure,
+                    // while allowing the menu to behave as normal.
+                    select: function( event, ui ) {
+                        var location = ui.item.children("a").attr("href");
+                        if (location) {
+                            window.location.href = location;
+                        }
+                    }
+                });
+            </script>
+        </div> <!-- end container -->
+
+    </body>
+</html>

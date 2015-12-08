@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Less simple: Removing preferences | First Discovery Tool Documentation</title>
+        <link rel="icon" type="image/png" href="images/favico.png">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/foundation.min.css">
+        <link rel="stylesheet" href="css/highlightjs-custom.css">
+        <link rel="stylesheet" href="lib/infusion/src/lib/jquery/ui/css/default-theme/jquery.ui.theme.css">
+
+        <link rel="stylesheet" type="text/css" href="lib/infusion/src/framework/preferences/css/Enactors.css" />
+        <link rel="stylesheet" type="text/css" href="lib/infusion/src/framework/preferences/css/PrefsEditor.css" />
+        <link rel="stylesheet" type="text/css" href="lib/infusion/src/framework/preferences/css/SeparatedPanelPrefsEditor.css" />
+        <link rel="stylesheet" href="css/docs-first-discovery.css">
+
+        <script type="text/javascript" src="lib/infusion/infusion-uio.js"></script>
+        <script type="text/javascript" src="js/DocsCore.js"></script>
+        <script type="text/javascript" src="lib/jqueryui/jquery-ui.min.js"></script>
+    </head>
+    <body class="docs-template docs-core-sidebar-expanded">
+
+        <div class="container docs-template-container">
+
+            <!-- Skip Link -->
+            <nav id="skip" class="fl-inverted-color">
+                <a href="#topics" class="docs-template-skip-topics">Skip to Topics</a>
+                <a href="#content" class="docs-template-skip-content">Skip to Content</a>
+            </nav>
+            <!-- END skip link -->
+
+
+            <header class="ignore-for-TOC row fl-inverted-color">
+                <!-- BEGIN markup for Preference Editor -->
+                <div class="flc-prefsEditor-separatedPanel fl-prefsEditor-separatedPanel">
+                    <!-- This is the div that will contain the Preference Editor component -->
+                    <div class="flc-slidingPanel-panel flc-prefsEditor-iframe"></div>
+
+                    <!-- This div is for the sliding panel that shows and hides the Preference Editor controls -->
+                    <div class="fl-panelBar">
+                        <span class="fl-prefsEditor-buttons">
+                            <button id="reset" class="flc-prefsEditor-reset fl-prefsEditor-reset"><span class="fl-icon-undo"></span> Reset</button>
+                            <button id="show-hide" class="flc-slidingPanel-toggleButton fl-prefsEditor-showHide">+ show display preferences</button>
+                        </span>
+                    </div>
+                </div>
+                <!-- END markup for Preference Editor -->
+
+                <div class="small-12 column docs-template-header">
+                    <a class="docs-template-logo" href="index.html" title="Home: First Discovery Tool Documentation">
+                        <span class="show-for-sr">
+                            <h1>Documentation for the First Discovery Tool</h1>
+                        </span>
+                        <span aria-hidden="true">
+                            <h1>First Discovery Tool</h1>
+                            <span class="docs-template-tagline">Documentation</span>
+                        </span>
+                    </a>
+
+                    
+                    <nav class="right show-for-small-only docs-template-nav-mobile">
+                        <ul id="menu">
+                            <li class="docs-template-dropDown-header"><span class="docs-template-nav-mobile-icon"></span>
+                                <ul class="docs-template-dropDown">
+                                    
+                                    
+                                        
+                                            <li><a href="index.html" title="Overview">Overview</a></li>
+                                        
+                                    
+                                        
+                                            <li class="docs-template-category-active"><span aria-label="Currently on Category: Tutorials">Tutorials</span></li>
+                                        
+                                    
+                                        
+                                            <li><a href="index-api.html" title="API">API</a></li>
+                                        
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="docs-template-header">
+                    <nav class="small-12 column show-for-medium-up">
+                        <ul class="inline-list right">
+                        
+                        
+                            
+                                <li><a href="index.html" title="Overview">Overview</a></li>
+                            
+                        
+                            
+                                <li class="docs-template-category-active"><span aria-label="Currently on Category: Tutorials">Tutorials</span></li>
+                            
+                        
+                            
+                                <li><a href="index-api.html" title="API">API</a></li>
+                            
+                        
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <div class="docs-corec-sidebar-bar ignore-for-TOC docs-template-topics-container small-8 medium-3 column">
+                <nav id="topics" class="docs-template-topics" tabindex="-1">
+                    
+                        
+                        
+                    
+                        
+                        
+                            <h2 class="docs-template-category">Tutorials</h2>
+                            
+                                <h3 class="docs-template-sectionName">Customizing the First Discovery Tool</h3>
+                                <ul>
+                                    
+                                        <li>
+                                            
+                                                <a href="reordering.html">Simplest: Reordering preferences</a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <span aria-label="Currently on: Less simple: Removing preferences" class="docs-template-topics-active">Less simple: Removing preferences</span>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a href="adding.html">More complicated: Adding a simple preference </a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a href="enactors.html">Enactors</a>
+                                            
+                                        </li>
+                                    
+                                        <li>
+                                            
+                                                <a href="serverConfig.html">Advanced: Configuring the connection to the Preferences Server</a>
+                                            
+                                        </li>
+                                    
+                                </ul>
+                            
+                        
+                    
+                        
+                        
+                    
+                </nav>
+            </div>
+
+            <div class="docs-template-articleBody small-12 medium-8 column">
+
+                <div class="small-4 medium-1 column docs-template-topics-hideShow fl-inverted-color">
+                    <a href="#" class="docs-corec-sidebar-toggle">Topics</a>
+                </div>
+
+                <article id="content">
+                    <h1>Less simple: Removing preferences</h1>
+
+                    <div class="flc-toc-tocContainer docs-template-uio-toc"> </div>
+
+
+                    <div class="docs-template-articleContent">
+                        <p>Your flying car doesn’t support some of the preferences in the First Discovery Tool – in particular, contrast, captions and keyboard preferences. You want to remove those preferences entirely.</p>
+<h2 id="quick-version">Quick version</h2>
+<ol>
+<li>Edit <code>demos/index.html</code> to remove the icons at the bottom of the screen.</li>
+<li>Edit <code>firstDiscovery.html</code> to remove the placeholders for the panels.</li>
+<li>Edit <code>schemas.js</code> to remove code for the panels from the auxiliary schema.</li>
+</ol>
+<h2 id="detailed-instructions">Detailed Instructions</h2>
+<ol>
+<li><p>Edit <code>demos/index.html</code> to remove the icons at the bottom of the screen.</p>
+<p> A. In the <code>demos/index.html</code> file, find the list of icons (a <code>&lt;ul&gt;</code> with the class <code>&quot;gpii-fd-navIcon-outer&quot;</code>  as described above).</p>
+<p> B. Find the <code>&lt;li&gt;</code> elements for the preferences we want to remove. Look for the class names <code>&quot;gpii-fd-contrast&quot;</code>, <code>&quot;gpii-fd-captions&quot;</code> and <code>&quot;gpii-fd-prefsEditor-panel-onScreenKeyboard&quot;</code>.</p>
+<pre class="highlight"><code class="hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpii-fd-navIcon-outer"</span>&gt;</span>
+     <span class="hljs-comment">&lt;!-- some list items not shown --&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-navIcon gpii-fd-navIcon gpii-fd-speechRate"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-activeIndicator gpii-fd-activeIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-confirmedIndicator gpii-fd-confirmedIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-navIcon gpii-fd-navIcon gpii-fd-contrast"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-activeIndicator gpii-fd-activeIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-confirmedIndicator gpii-fd-confirmedIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-navIcon gpii-fd-navIcon gpii-fd-text"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-activeIndicator gpii-fd-activeIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-confirmedIndicator gpii-fd-confirmedIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-navIcon gpii-fd-navIcon gpii-fd-onScreenKeyboard"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-activeIndicator gpii-fd-activeIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-confirmedIndicator gpii-fd-confirmedIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-navIcon gpii-fd-navIcon gpii-fd-captions"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-activeIndicator gpii-fd-activeIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-confirmedIndicator gpii-fd-confirmedIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-navIcon gpii-fd-navIcon gpii-fd-keyboard"</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-activeIndicator gpii-fd-activeIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-confirmedIndicator gpii-fd-confirmedIndicator"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+     <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+     <span class="hljs-comment">&lt;!-- some list items not shown --&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</code></pre>
+<p> C. Remove the <code>&lt;li&gt;</code> elements, with all of their contents.</p>
+</li>
+<li><p>Edit <code>src/html/firstDiscovery.html</code> to remove the placeholders for the panels.</p>
+<p> A. In the <code>src/html/firstDiscovery.html</code> file, find the <code>&lt;section&gt;</code> elements for the panels we want to remove. Look for the class names <code>&quot;gpiic-fd-prefsEditor-panel-contrast&quot;</code>, <code>&quot;gpiic-fd-prefsEditor-panel-captions&quot;</code> and <code>&quot;gpiic-fd-prefsEditor-panel-onScreenKeyboard&quot;</code>.</p>
+<pre class="highlight"><code class="hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-lang gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-lang gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-welcome gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-welcome gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-showSounds gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-showSounds gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-speakText gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-speakText gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-speechRate gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-speechRate gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-contrast gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-contrast gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-size gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-size gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-onScreenKeyboard gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-onScreenKeyboard gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-captions gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-captions gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-keyboard gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-keyboard gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">section</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"gpiic-fd-prefsEditor-panel-congratulations gpiic-fd-prefsEditor-panel gpii-fd-prefsEditor-panel-congratulations gpii-fd-main"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">section</span>&gt;</span>
+</code></pre>
+<p> B. Remove the <code>&lt;section&gt;</code> elements completely.</p>
+</li>
+<li><p>Edit <code>src/schemas/schemas.js</code> to remove code for the panels from the auxiliary schema.</p>
+<p> A. The <code>src/js/schemas.js</code> contains the primary schema (which defines the preferences) and the auxiliary schema (which defines the editor itself, i.e. the panels used to adjust the preferences, where to find HTML templates, etc).</p>
+<p> You can see the entire file here: <a href="https://github.com/GPII/first-discovery/blob/master/src/schemas/schemas.js">https://github.com/GPII/first-discovery/blob/master/src/schemas/schemas.js</a></p>
+<p> B. In the <code>schemas.js</code> file, find the auxiliary schema, which starts with <code>fluid.defaults(&quot;gpii.firstDiscovery.auxSchema&quot;,</code>.</p>
+<pre class="highlight"><code class="hljs javascript"> fluid.defaults(<span class="hljs-string">"gpii.firstDiscovery.auxSchema"</span>, {
+     gradeNames: [<span class="hljs-string">"fluid.prefs.auxSchema"</span>],
+     auxiliarySchema: {
+         <span class="hljs-string">"loaderGrades"</span>: [<span class="hljs-string">"gpii.firstDiscovery.firstDiscoveryEditor"</span>],
+         <span class="hljs-comment">// more not shown here</span>
+</code></pre>
+<p> C. Inside the section named <code>&quot;auxiliarySchema&quot;</code>, find the properties that are named to match the preferences we want to remove. Look for <code>&quot;contrast&quot;</code>, <code>&quot;captions&quot;</code> and <code>&quot;onscreenKeyboard&quot;</code>.</p>
+<pre class="highlight"><code class="hljs javascript"> <span class="hljs-string">"speechRate"</span>: {
+     <span class="hljs-string">"type"</span>: <span class="hljs-string">"gpii.firstDiscovery.speechRate"</span>,
+     <span class="hljs-string">"panel"</span>: {
+         <span class="hljs-string">"type"</span>: <span class="hljs-string">"gpii.firstDiscovery.panel.speechRate"</span>,
+         <span class="hljs-string">"container"</span>: <span class="hljs-string">".gpiic-fd-prefsEditor-panel-speechRate"</span>,
+         <span class="hljs-string">"template"</span>: <span class="hljs-string">"%templatePrefix/rangeWithDisabledMsgTemplate.html"</span>,
+         <span class="hljs-string">"message"</span>: <span class="hljs-string">"%messagePrefix/speechRate.json"</span>,
+         <span class="hljs-string">"gradeNames"</span>: [<span class="hljs-string">"gpii.firstDiscovery.panel.speechRate.prefsEditorConnection"</span>]
+     }
+ },
+ <span class="hljs-string">"contrast"</span>: {
+     <span class="hljs-string">"type"</span>: <span class="hljs-string">"fluid.prefs.contrast"</span>,
+     <span class="hljs-string">"classes"</span>: {
+         <span class="hljs-string">"default"</span>: <span class="hljs-string">"fl-theme-prefsEditor-default"</span>,
+         <span class="hljs-string">"bw"</span>: <span class="hljs-string">"fl-theme-prefsEditor-bw fl-theme-bw"</span>,
+         <span class="hljs-string">"wb"</span>: <span class="hljs-string">"fl-theme-prefsEditor-wb fl-theme-wb"</span>
+     },
+     <span class="hljs-string">"enactor"</span>: {
+         <span class="hljs-string">"type"</span>: <span class="hljs-string">"fluid.prefs.enactor.contrast"</span>,
+         <span class="hljs-string">"classes"</span>: <span class="hljs-string">"@contrast.classes"</span>
+     },
+     <span class="hljs-string">"panel"</span>: {
+         <span class="hljs-string">"type"</span>: <span class="hljs-string">"gpii.firstDiscovery.panel.contrast"</span>,
+         <span class="hljs-string">"container"</span>: <span class="hljs-string">".gpiic-fd-prefsEditor-panel-contrast"</span>,
+         <span class="hljs-string">"classnameMap"</span>: {<span class="hljs-string">"theme"</span>: <span class="hljs-string">"@contrast.classes"</span>},
+         <span class="hljs-string">"template"</span>: <span class="hljs-string">"%templatePrefix/contrast.html"</span>,
+         <span class="hljs-string">"message"</span>: <span class="hljs-string">"%messagePrefix/contrast.json"</span>
+     }
+ },
+ <span class="hljs-string">"textSize"</span>: {
+     <span class="hljs-string">"type"</span>: <span class="hljs-string">"fluid.prefs.textSize"</span>,
+     <span class="hljs-string">"enactor"</span>: {
+         <span class="hljs-string">"type"</span>: <span class="hljs-string">"fluid.prefs.enactor.textSize"</span>
+     },
+     <span class="hljs-string">"panel"</span>: {
+         <span class="hljs-string">"type"</span>: <span class="hljs-string">"gpii.firstDiscovery.panel.textSize"</span>,
+         <span class="hljs-string">"container"</span>: <span class="hljs-string">".gpiic-fd-prefsEditor-panel-size"</span>,
+         <span class="hljs-string">"template"</span>: <span class="hljs-string">"%templatePrefix/rangeTemplate.html"</span>,
+         <span class="hljs-string">"message"</span>: <span class="hljs-string">"%messagePrefix/textSize.json"</span>
+     }
+ },
+ <span class="hljs-string">"onScreenKeyboard"</span>: {
+     <span class="hljs-string">"type"</span>: <span class="hljs-string">"gpii.firstDiscovery.onScreenKeyboard"</span>,
+     <span class="hljs-string">"panel"</span>: {
+         <span class="hljs-string">"type"</span>: <span class="hljs-string">"gpii.firstDiscovery.panel.onScreenKeyboard"</span>,
+         <span class="hljs-string">"container"</span>: <span class="hljs-string">".gpiic-fd-prefsEditor-panel-onScreenKeyboard"</span>,
+         <span class="hljs-string">"template"</span>: <span class="hljs-string">"%templatePrefix/yesNo.html"</span>,
+         <span class="hljs-string">"message"</span>: <span class="hljs-string">"%messagePrefix/onScreenKeyboard.json"</span>
+     }
+ },
+ <span class="hljs-string">"captions"</span>: {
+     <span class="hljs-string">"type"</span>: <span class="hljs-string">"gpii.firstDiscovery.captions"</span>,
+     <span class="hljs-string">"panel"</span>: {
+         <span class="hljs-string">"type"</span>: <span class="hljs-string">"gpii.firstDiscovery.panel.captions"</span>,
+         <span class="hljs-string">"container"</span>: <span class="hljs-string">".gpiic-fd-prefsEditor-panel-captions"</span>,
+         <span class="hljs-string">"template"</span>: <span class="hljs-string">"%templatePrefix/yesNo.html"</span>,
+         <span class="hljs-string">"message"</span>: <span class="hljs-string">"%messagePrefix/captions.json"</span>
+     }
+ },
+ <span class="hljs-string">"showSounds"</span>: {
+     <span class="hljs-string">"type"</span>: <span class="hljs-string">"gpii.firstDiscovery.showSounds"</span>,
+     <span class="hljs-string">"panel"</span>: {
+         <span class="hljs-string">"type"</span>: <span class="hljs-string">"gpii.firstDiscovery.panel.showSounds"</span>,
+         <span class="hljs-string">"container"</span>: <span class="hljs-string">".gpiic-fd-prefsEditor-panel-showSounds"</span>,
+         <span class="hljs-string">"template"</span>: <span class="hljs-string">"%templatePrefix/yesNo.html"</span>,
+         <span class="hljs-string">"message"</span>: <span class="hljs-string">"%messagePrefix/showSounds.json"</span>
+     }
+ },
+</code></pre>
+<p> D. Remove the properties, including the keys.</p>
+</li>
+</ol>
+
+                    </div>
+
+                    <p class="docs-template-githubLink"><a href="https://github.com/GPII/docs-first-discovery/blob/master/src/documents/removing.md" rel="nofollow" target="_blank" class="link-external">Edit this Page on GitHub</a></p>
+                </article>
+
+            </div>
+
+            <footer class="row docs-template-footer fl-inverted-color">
+                <p>The First Discovery Tool was developed by the <a href="http://idrc.ocad.ca/" rel="nofollow" target="_blank">Inclusive Design Research Centre</a>,<br/>
+                through the <a href="https://wiki.fluidproject.org/display/fluid/Preferences+for+Global+Access">Preferences for Global Access</a> project,
+                funded by the US Dept. of Educations's <a href="http://www.ed.gov/category/program/national-institute-disability-and-rehabilitation-research">National Institute on Disability and Rehabilitation Research</a>.</p>
+            </footer>
+
+            <script type="text/javascript">
+                docsCore.init("./");
+                jQuery( "#menu" ).menu({
+                    position: {my: "right top", at: "right bottom"},
+                    icons: {submenu:"ui-icon-blank"},
+                    // Remove the anchors from the tabindex as they are triggered
+                    // via the select event. (see below)
+                    create: function (event, ui) {
+                        jQuery("#menu .ui-menu-item a").attr("tabindex", -1);
+                    },
+                    // The jQuery menu doesn't seem to like it when the <a> are
+                    // specified as the "item" and are nested under an <li>. There
+                    // seems to be styling issues and occassionally an error thrown.
+                    // The page transition work around below is used to maintian the semantic structure,
+                    // while allowing the menu to behave as normal.
+                    select: function( event, ui ) {
+                        var location = ui.item.children("a").attr("href");
+                        if (location) {
+                            window.location.href = location;
+                        }
+                    }
+                });
+            </script>
+        </div> <!-- end container -->
+
+    </body>
+</html>
